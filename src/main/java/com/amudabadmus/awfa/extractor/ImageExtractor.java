@@ -8,13 +8,15 @@ import javax.inject.Named;
 @Named
 @RequestScoped
 @ManagedBean(name="imageExtractor")
-public class ImageExtractor {
-    public String extractImageContent(String filePath) {
-        File imageFile = new File(filePath);
+public class ImageExtractor
+{
+    private String imgText;
+    public String getImgText(String imageLocation) {
+        File imageFile = new File(imageLocation);
         ITesseract instance = new Tesseract();
         try {
-            String result = instance.doOCR(imageFile);
-            return result;
+            imgText = instance.doOCR(imageFile);
+            return imgText;
         } catch (TesseractException e) {
             e.getMessage();
             return "Error while reading image";

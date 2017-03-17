@@ -2,11 +2,11 @@ package com.amudabadmus.awfa;
 import com.amudabadmus.awfa.extractor.ImageExtractor;
 public class ImageDriver
 {
-	public String imgText = "C:\\Users\\User\\Pictures\\3.png";
+	public String imgText = "C:\\Users\\User\\Pictures\\flutterwave\\1.png";
 	ImageExtractor imageExtractor = new ImageExtractor();
 	public String getImgText ()
 	{
-		return imageExtractor.extractImageContent(imgText);
+		return imageExtractor.getImgText(imgText);
 	}
 	public void setImgText( String myImgTxt)
 	{

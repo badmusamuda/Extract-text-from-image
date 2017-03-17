@@ -113,9 +113,9 @@
             <h:form>
                 <ul>
                     <li>
-                       <a>#{app.getUserRequest()} || #{app.userRequest} ]] || #{imageExtractor.extractImageContent(app.userRequest)}  </a></li>
+                       <a>#{app.getUserRequest()} || #{app.userRequest} ]] || #{imageExtractor.getImgText(app.userRequest)}  </a></li>
                     <li>
-                        <p class="wow fadeInDown">#{app.getUserRequest()}...|| #{app.userRequest} || ...#{imageExtractor.extractImageContent(app.userRequest)} </p>
+                        <p class="wow fadeInDown">#{app.getUserRequest()}...|| #{app.userRequest} || ...#{imageExtractor.getImgText(app.userRequest)} </p>
                     </li>
                     <li>
                         <input type="submit"  jsf:action="/index" id="submit" value="#{app.roleOne}" class="btn btn-primary btn-lg wow fadeInLeft" data-wow-delay="0.2s"/>
